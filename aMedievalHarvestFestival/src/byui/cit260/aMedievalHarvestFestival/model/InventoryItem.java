@@ -11,7 +11,7 @@ import java.util.Objects;
 
 /**
  *
- * @author edit: Kurt
+ * @author edit: Adam Decker
  */
 public class InventoryItem implements Serializable {
     public static void main(String[] args){
