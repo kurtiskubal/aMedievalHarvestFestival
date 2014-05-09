@@ -27,7 +27,7 @@ import byui.cit260.aMedievalHarvestFestival.model.YardInstance;
 
 
 /**
- *
+ * co-editor: Adam
  * @author Kurt
  */
 public class AMedievalHarvestFestival {
