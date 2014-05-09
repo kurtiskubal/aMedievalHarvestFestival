@@ -6,22 +6,12 @@
 
 package byui.cit260.aMedievalHarvestFestival.model;
 
-import java.io.Serializable;
-import java.util.Objects;
-
 /**
- *
+ * @version Adam
  * @author edit: Kurt
  */
-public class BeverageItem implements Serializable {
-     public static void main(String[] args){
-        BeverageItem beverageItemOne = new BeverageItem();
-        
-        beverageItemOne.setQuenchFactor(50.0);
-        
-        String beverageItemInfo = beverageItemOne.toString();
-        System.out.println(beverageItemInfo);
-    }
+public class BeverageItem extends InventoryItem {
+    
 
     //class instance variables
     private Double quenchFactor;
@@ -37,32 +27,5 @@ public class BeverageItem implements Serializable {
         this.quenchFactor = quenchFactor;
     }
 
-    @Override
-    public String toString() {
-        return "BeverageItem{" + "quenchFactor=" + quenchFactor + '}';
-    }
-
-    @Override
-    public int hashCode() {
-        int hash = 7;
-        hash = 53 * hash + Objects.hashCode(this.quenchFactor);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final BeverageItem other = (BeverageItem) obj;
-        if (!Objects.equals(this.quenchFactor, other.quenchFactor)) {
-            return false;
-        }
-        return true;
-    }
-    
     
 }
