@@ -13,14 +13,7 @@ import java.io.Serializable;
  * @author Kurt
  */
 public class Location implements Serializable {
-    public static void main(String[] args){
-        Location locationOne = new Location();
-        
-        locationOne.setCoordinates(29);
-        
-        String locationInfo = locationOne.toString();
-        System.out.println(locationInfo);
-    }
+    
     private double coordinates;
 
     public Location() {

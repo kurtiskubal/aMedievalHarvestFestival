@@ -14,19 +14,6 @@ import java.util.Objects;
  * @author Kurt
  */
 public class InstanceLocation implements Serializable {
-   public static void main(String[] args){
-       InstanceLocation instanceLocationOne = new InstanceLocation();
-       
-       instanceLocationOne.setVisited("'You have been here before.'");
-       instanceLocationOne.setDescription("'You look around and find that you are in the Royal library.'");
-       instanceLocationOne.setType("'Room'");
-       instanceLocationOne.setItemsStored("'There is a: 00 Sword, 01 Book on the Study of Corn, 02 Inkwell'");
-       instanceLocationOne.setEnergyUsed(5);
-       instanceLocationOne.setFluidsUsed(10);
-       
-       String instanceLocationInfo = instanceLocationOne.toString();
-        System.out.println(instanceLocationInfo);
-   }
     
     //class instance variables
     private String visited;

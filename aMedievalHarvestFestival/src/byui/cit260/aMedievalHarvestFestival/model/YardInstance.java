@@ -14,18 +14,7 @@ import java.util.Objects;
  * @author Kurt
  */
 public class YardInstance implements Serializable{
-    public static void main(String[] args){
-        YardInstance yardInstanceOne = new YardInstance();
-        
-        yardInstanceOne.setSqFootageYard(100.0);
-        yardInstanceOne.setGrassLength(0.25);
-        
-        String yardInstanceInfo = yardInstanceOne.toString();
-        System.out.println(yardInstanceInfo);
-    }
-
-
-
+    
     //class instance variables
     private Double sqFootageYard;
     private Double grassLength;

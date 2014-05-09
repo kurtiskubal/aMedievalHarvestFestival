@@ -13,19 +13,6 @@ import java.io.Serializable;
  * @author Kurt
  */
 public class RoomInstance implements Serializable{
-   public static void main(String[] args){
-        RoomInstance roomInstanceOne = new RoomInstance();
-        
-        roomInstanceOne.setRoomHeight(20.0);
-        roomInstanceOne.setRoomWidth(30.0);
-        roomInstanceOne.setRoomLength(10.0);
-        roomInstanceOne.setSqFootageRoom(300.0);
-        
-        String roomInstanceInfo = roomInstanceOne.toString();
-        System.out.println(roomInstanceInfo);
-    }
-    
-
 
     //class instance variables
     private double roomHeight;
