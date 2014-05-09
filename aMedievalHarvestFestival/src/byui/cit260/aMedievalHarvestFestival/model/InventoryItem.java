@@ -10,20 +10,11 @@ import java.io.Serializable;
 import java.util.Objects;
 
 /**
- *
+ * @version Kurt
  * @author edit: Adam Decker
  */
 public class InventoryItem implements Serializable {
-    public static void main(String[] args){
-        InventoryItem inventoryItemOne = new InventoryItem();
-        
-        inventoryItemOne.setInventoryType("'FoodItem'");
-        inventoryItemOne.setItemQuanity(2);
-        inventoryItemOne.setDescription("'Bright red honeycrisp apple from the hills of Fjiord.'");
-        
-        String inventoryItemInfo = inventoryItemOne.toString();
-        System.out.println(inventoryItemInfo);
-    }
+
 
 
     //class instance variables

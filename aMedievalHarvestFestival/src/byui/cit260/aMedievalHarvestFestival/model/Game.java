@@ -9,19 +9,12 @@ package byui.cit260.aMedievalHarvestFestival.model;
 import java.io.Serializable;
 
 /**
- *
+ * second look: Adam
  * @author Kurt
  */
 public class Game implements Serializable{
 
-    public static void main(String[] args){
-        Game gameOne = new Game();
-        
-        gameOne.setTotalTime(7.90);
-        
-        String gameInfo = gameOne.toString();
-        System.out.println(gameInfo);
-    }
+
 
 //class instance variables
     private double totalTime;

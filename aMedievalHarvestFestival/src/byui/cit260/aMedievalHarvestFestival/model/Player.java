@@ -10,20 +10,11 @@ import java.io.Serializable;
 import java.util.Objects;
 
 /**
- *
+ * second look: Adam
  * @author Kurt
  */
 public class Player implements Serializable{
-    public static void main(String[] args){
-        Player playerOne = new Player();
     
-        playerOne.setName("Lou Gerig");
-        playerOne.setBestTime(20.00);
-        
-        String playerInfo = playerOne.toString();
-        System.out.println(playerInfo);
-        
-    }
     
 // class instance variables
     private String name;
