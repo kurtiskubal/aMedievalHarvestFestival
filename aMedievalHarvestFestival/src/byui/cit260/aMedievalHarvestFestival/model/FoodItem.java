@@ -6,22 +6,12 @@
 
 package byui.cit260.aMedievalHarvestFestival.model;
 
-import java.io.Serializable;
-import java.util.Objects;
-
 /**
- *
+ * @version Adam
  * @author edit: Kurt
  */
-public class FoodItem implements Serializable {
-     public static void main(String[] args){
-        FoodItem foodItemOne = new FoodItem();
-        
-        foodItemOne.setFillingFactor(5.6);
-        
-        String foodItemInfo = foodItemOne.toString();
-        System.out.println(foodItemInfo);
-    }
+public class FoodItem extends InventoryItem {
+     
 
     //class instance variables
     private Double fillingFactor;
@@ -37,32 +27,5 @@ public class FoodItem implements Serializable {
         this.fillingFactor = fillingFactor;
     }
 
-    @Override
-    public String toString() {
-        return "FoodItem{" + "fillingFactor=" + fillingFactor + '}';
-    }
-
-    @Override
-    public int hashCode() {
-        int hash = 7;
-        hash = 97 * hash + Objects.hashCode(this.fillingFactor);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final FoodItem other = (FoodItem) obj;
-        if (!Objects.equals(this.fillingFactor, other.fillingFactor)) {
-            return false;
-        }
-        return true;
-    }
-    
     
 }
