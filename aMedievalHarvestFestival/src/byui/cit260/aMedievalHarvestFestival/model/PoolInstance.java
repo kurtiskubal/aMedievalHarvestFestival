@@ -14,20 +14,7 @@ import java.util.Objects;
  * @author Kurt
  */
 public class PoolInstance implements Serializable {
-    public static void main(String[] args){
-        PoolInstance poolInstanceOne = new PoolInstance();
-        
-        poolInstanceOne.setPoolDepth(10.0);
-        poolInstanceOne.setPoolLength(50.0);
-        poolInstanceOne.setPoolWidth(20.0);
-        
-        String poolInstanceInfo = poolInstanceOne.toString();
-        System.out.println(poolInstanceInfo);
-    }
-
-
-
-
+    
     //class instance variables
     private Double poolDepth;
     private Double poolLength;

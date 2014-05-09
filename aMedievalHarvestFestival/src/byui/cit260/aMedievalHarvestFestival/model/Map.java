@@ -14,17 +14,7 @@ import java.io.Serializable;
  */
 public class Map implements Serializable {
     
-    public static void main(String[] args){
-        Map mapOrigin = new Map();
-        
-        mapOrigin.setRowCount(56);
-        mapOrigin.setColumnCount(123);
-        
-        String mapInfo = mapOrigin.toString();
-        System.out.println(mapInfo);
-    }
-    
-    //class instance variables
+//class instance variables
     private double rowCount;
     private double columnCount;
 

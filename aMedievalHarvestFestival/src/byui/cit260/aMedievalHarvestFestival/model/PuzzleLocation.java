@@ -14,15 +14,7 @@ import java.util.Objects;
  * @author Kurt
  */
 public class PuzzleLocation implements Serializable {
-    public static void main(String[] args){
-        PuzzleLocation puzzleLocationOne = new PuzzleLocation();
-        
-        puzzleLocationOne.setQuestion("'What is the square root of 4?'");
-        puzzleLocationOne.setAnswer(2.0);
-        
-        String puzzleLocationInfo = puzzleLocationOne.toString();
-        System.out.println(puzzleLocationInfo);
-    }
+    
     //class instance variables
     private String question;
     private Double answer;

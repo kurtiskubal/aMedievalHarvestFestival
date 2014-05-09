@@ -15,19 +15,6 @@ import java.util.Objects;
  */
 public class Actors implements Serializable {
     
-    public static void main(String[] args) {
-        Actors actorOne = new Actors();
-        
-        actorOne.setName("Gary Olmison");
-        actorOne.setDialogue("'What can I do for you?'");
-        actorOne.setHappiness(0);
-        actorOne.setHealth(150);
-    
-        String actorInfo = actorOne.toString();
-        System.out.println(actorInfo);
-    }
-    
-    
     // class instance variables
     private String name;
     private String dialogue;
