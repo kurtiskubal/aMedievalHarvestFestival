@@ -26,6 +26,14 @@ public class AMedievalHarvestFestival {
      */
     public static void main(String[] args) {
         
+        /********************************************
+        *Please read. Be sure to import the classes
+        *into this to be able to call the classes and
+        *their functions. I have already imported
+        *the classes to the class instances I added.
+        *-Kurtis Kubal
+        *********************************************/
+        
         Actors actorOne = new Actors();
         
         actorOne.setName("Gary Olmison");
