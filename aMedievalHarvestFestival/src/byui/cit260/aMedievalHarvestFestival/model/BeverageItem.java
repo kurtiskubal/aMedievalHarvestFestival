@@ -6,6 +6,8 @@
 
 package byui.cit260.aMedievalHarvestFestival.model;
 
+import java.util.Objects;
+
 /**
  * @version Adam
  * @author edit: Kurt
@@ -25,6 +27,33 @@ public class BeverageItem extends InventoryItem {
 
     public void setQuenchFactor(Double quenchFactor) {
         this.quenchFactor = quenchFactor;
+    }
+
+    @Override
+    public String toString() {
+        return "BeverageItem{" + "quenchFactor=" + quenchFactor + '}';
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 97 * hash + Objects.hashCode(this.quenchFactor);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final BeverageItem other = (BeverageItem) obj;
+        if (!Objects.equals(this.quenchFactor, other.quenchFactor)) {
+            return false;
+        }
+        return true;
     }
 
     

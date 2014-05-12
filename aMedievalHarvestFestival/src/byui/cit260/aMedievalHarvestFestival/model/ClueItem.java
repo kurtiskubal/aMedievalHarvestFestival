@@ -6,6 +6,8 @@
 
 package byui.cit260.aMedievalHarvestFestival.model;
 
+import java.util.Objects;
+
 /**
  *
  * @author Adam
@@ -35,6 +37,37 @@ public class ClueItem extends InventoryItem{
 
     public void setEvidenceRemaining(Integer evidenceRemaining) {
         this.evidenceRemaining = evidenceRemaining;
+    }
+
+    @Override
+    public String toString() {
+        return "ClueItem{" + "keyInformation=" + keyInformation + ", evidenceRemaining=" + evidenceRemaining + '}';
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 89 * hash + Objects.hashCode(this.keyInformation);
+        hash = 89 * hash + Objects.hashCode(this.evidenceRemaining);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final ClueItem other = (ClueItem) obj;
+        if (!Objects.equals(this.keyInformation, other.keyInformation)) {
+            return false;
+        }
+        if (!Objects.equals(this.evidenceRemaining, other.evidenceRemaining)) {
+            return false;
+        }
+        return true;
     }
     
     
