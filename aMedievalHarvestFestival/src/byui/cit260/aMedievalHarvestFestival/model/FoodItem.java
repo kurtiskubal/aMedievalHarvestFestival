@@ -63,6 +63,5 @@ public class FoodItem extends InventoryItem {
         return isEqual;
 // <--end
     }
-
-    
+  
 }

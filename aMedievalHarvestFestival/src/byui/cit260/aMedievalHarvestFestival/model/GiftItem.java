@@ -27,5 +27,32 @@ public class GiftItem extends InventoryItem{
         this.joyGiving = joyGiving;
     }
 
+    @Override
+    public String toString() {
+        return "GiftItem{" + "joyGiving=" + joyGiving + '}';
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 67 * hash + (int) (Double.doubleToLongBits(this.joyGiving) ^ (Double.doubleToLongBits(this.joyGiving) >>> 32));
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final GiftItem other = (GiftItem) obj;
+        if (Double.doubleToLongBits(this.joyGiving) != Double.doubleToLongBits(other.joyGiving)) {
+            return false;
+        }
+        return true;
+    }
+    
     
 }
