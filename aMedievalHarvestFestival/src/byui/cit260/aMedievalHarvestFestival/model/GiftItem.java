@@ -29,13 +29,18 @@ public class GiftItem extends InventoryItem{
 
     @Override
     public String toString() {
-        return "GiftItem{" + "joyGiving=" + joyGiving + '}';
+        // this pulls down the super class data
+        return super.toString() + "GiftItem{" + "joyGiving=" + joyGiving + '}';
+    // <--end
     }
 
     @Override
     public int hashCode() {
         int hash = 7;
         hash = 67 * hash + (int) (Double.doubleToLongBits(this.joyGiving) ^ (Double.doubleToLongBits(this.joyGiving) >>> 32));
+        // this pulls down the super class data
+        hash = hash + super.hashCode();
+// <--end
         return hash;
     }
 
@@ -51,7 +56,10 @@ public class GiftItem extends InventoryItem{
         if (Double.doubleToLongBits(this.joyGiving) != Double.doubleToLongBits(other.joyGiving)) {
             return false;
         }
-        return true;
+        // this pulls down the super class data
+        boolean isEqual = super.equals(obj);
+        return isEqual;
+// <--end
     }
     
     

@@ -41,7 +41,9 @@ public class ClueItem extends InventoryItem{
 
     @Override
     public String toString() {
-        return "ClueItem{" + "keyInformation=" + keyInformation + ", evidenceRemaining=" + evidenceRemaining + '}';
+        // this pulls down the super class data
+        return super.toString() + "ClueItem{" + "keyInformation=" + keyInformation + ", evidenceRemaining=" + evidenceRemaining + '}';
+    // <--end
     }
 
     @Override
@@ -49,6 +51,9 @@ public class ClueItem extends InventoryItem{
         int hash = 5;
         hash = 89 * hash + Objects.hashCode(this.keyInformation);
         hash = 89 * hash + Objects.hashCode(this.evidenceRemaining);
+        // this pulls down the super class data
+        hash = hash + super.hashCode();
+// <--end
         return hash;
     }
 
@@ -67,7 +72,10 @@ public class ClueItem extends InventoryItem{
         if (!Objects.equals(this.evidenceRemaining, other.evidenceRemaining)) {
             return false;
         }
-        return true;
+        // this pulls down the super class data
+        boolean isEqual = super.equals(obj);
+        return isEqual;
+// <--end
     }
     
     

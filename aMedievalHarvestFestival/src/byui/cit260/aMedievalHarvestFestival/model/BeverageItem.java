@@ -31,13 +31,18 @@ public class BeverageItem extends InventoryItem {
 
     @Override
     public String toString() {
-        return "BeverageItem{" + "quenchFactor=" + quenchFactor + '}';
+        // this pulls down the super class data
+        return super.toString() + "BeverageItem{" + "quenchFactor=" + quenchFactor + '}';
+    // <--end
     }
 
     @Override
     public int hashCode() {
         int hash = 7;
         hash = 97 * hash + Objects.hashCode(this.quenchFactor);
+        // this pulls down the super class data
+        hash = hash + super.hashCode();
+// <--end
         return hash;
     }
 
@@ -53,7 +58,10 @@ public class BeverageItem extends InventoryItem {
         if (!Objects.equals(this.quenchFactor, other.quenchFactor)) {
             return false;
         }
-        return true;
+        // this pulls down the super class data
+        boolean isEqual = super.equals(obj);
+        return isEqual;
+// <--end
     }
 
     

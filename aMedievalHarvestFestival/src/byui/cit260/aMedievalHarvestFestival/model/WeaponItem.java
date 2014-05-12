@@ -39,7 +39,9 @@ public class WeaponItem extends InventoryItem {
 
     @Override
     public String toString() {
-        return "WeaponItem{" + "power=" + power + ", durability=" + durability + '}';
+        // this pulls down the super class data
+        return super.toString() + "WeaponItem{" + "power=" + power + ", durability=" + durability + '}';
+    // <--end
     }
 
     @Override
@@ -47,6 +49,9 @@ public class WeaponItem extends InventoryItem {
         int hash = 3;
         hash = 59 * hash + Objects.hashCode(this.power);
         hash = 59 * hash + Objects.hashCode(this.durability);
+        // this pulls down the super class data
+        hash = hash + super.hashCode();
+// <--end
         return hash;
     }
 
@@ -65,7 +70,10 @@ public class WeaponItem extends InventoryItem {
         if (!Objects.equals(this.durability, other.durability)) {
             return false;
         }
-        return true;
+        // this pulls down the super class data
+        boolean isEqual = super.equals(obj);
+        return isEqual;
+// <--end
     }
     
     
