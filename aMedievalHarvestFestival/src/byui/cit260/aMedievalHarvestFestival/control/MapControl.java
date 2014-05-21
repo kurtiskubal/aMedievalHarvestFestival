@@ -23,4 +23,31 @@ public class MapControl {
 
         return squareFootage;
     }
+    
+    public double calcVolumeOfPool(double poolWidth, double poolLength, double poolDepth){
+
+        if (poolWidth < 0 || poolLength < 0 || poolDepth < 0){
+            return -1;
+        }
+        if (poolLength > 80 || poolWidth > 40 || poolDepth > 20) { 
+            return -2;
+        }
+        double poolVolume = poolWidth * poolLength * poolDepth;
+
+        return poolVolume;
+    }
+    
+    public double calcSqFootageOfYard(double yardWidth, double yardLength){
+
+        if (yardWidth < 0 || yardLength < 0){
+            return -1;
+        }
+        if (yardLength > 200 || yardWidth > 100) { 
+            return -2;
+        }
+        double ydSquareFootage = yardWidth * yardLength;
+
+        return ydSquareFootage;
+    }
+    
 }
