@@ -16,7 +16,7 @@ public class MapControl {
         if (roomWidth < 0 || roomLength < 0){
             return -1;
         }
-        if (roomWidth > 50 || roomLength > 100) { 
+        if (roomLength > 50 || roomWidth > 100) { 
             return -2;
         }
         double squareFootage = roomWidth * roomLength;

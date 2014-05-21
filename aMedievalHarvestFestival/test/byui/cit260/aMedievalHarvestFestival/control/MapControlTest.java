@@ -33,15 +33,58 @@ public class MapControlTest {
      */
     @Test
     public void testCalcSqFootageOfRoom() {
-        System.out.println("calcSqFootageOfRoom");
-        double roomWidth = 0.0;
-        double roomLength = 0.0;
+        System.out.println("calcSqFootageOfRoom test 1");
+        double roomWidth = 10.0;
+        double roomLength = 5.0;
         MapControl instance = new MapControl();
-        double expResult = 0.0;
+        double expResult = 50.0;
         double result = instance.calcSqFootageOfRoom(roomWidth, roomLength);
         assertEquals(expResult, result, 0.0);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
+        System.out.println("calcSqFootageOfRoom test 2");
+        roomWidth = 10.0;
+        roomLength = -1.0;
+        expResult = -1.0;
+        result = instance.calcSqFootageOfRoom(roomWidth, roomLength);
+        assertEquals(expResult, result, 0.0);
+    
+        System.out.println("calcSqFootageOfRoom test 3");
+        roomWidth = -1.0;
+        roomLength = 5.0;
+        expResult = -1.0;
+        result = instance.calcSqFootageOfRoom(roomWidth, roomLength);
+        assertEquals(expResult, result, 0.0);
+    
+        System.out.println("calcSqFootageOfRoom test 4");
+        roomWidth = 120.0;
+        roomLength = 50.0;
+        expResult = -2.0;
+        result = instance.calcSqFootageOfRoom(roomWidth, roomLength);
+        assertEquals(expResult, result, 0.0);
+        
+        System.out.println("calcSqFootageOfRoom test 5");
+        roomWidth = 10.0;
+        roomLength = 0.0;
+        expResult = 0.0;
+        result = instance.calcSqFootageOfRoom(roomWidth, roomLength);
+        assertEquals(expResult, result, 0.0);
+    
+        System.out.println("calcSqFootageOfRoom test 6");
+        roomWidth = 0.0;
+        roomLength = 32.0;
+        expResult = 0.0;
+        result = instance.calcSqFootageOfRoom(roomWidth, roomLength);
+        assertEquals(expResult, result, 0.0);
+        
+        System.out.println("calcSqFootageOfRoom test 7");
+        roomWidth = 100.0;
+        roomLength = 50.0;
+        expResult = 5000.0;
+        result = instance.calcSqFootageOfRoom(roomWidth, roomLength);
+        assertEquals(expResult, result, 0.0);
+    
     }
+    
+    
     
 }
