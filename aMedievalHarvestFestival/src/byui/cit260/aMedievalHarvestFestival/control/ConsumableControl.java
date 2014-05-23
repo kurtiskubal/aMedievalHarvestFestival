@@ -8,7 +8,7 @@ package byui.cit260.aMedievalHarvestFestival.control;
 
 /**
  *
- * @author zev
+ * @author Adam Decker
  */
 public class ConsumableControl {
     public Integer calcFillingFoodItem(Integer foodType, Integer weight){
@@ -30,9 +30,9 @@ public class ConsumableControl {
         if (beverageType > 5)return -3;
         if(volume > 10)return -4;
         else {
-            Integer fillingFactor;
-            fillingFactor = beverageType * volume;
-            return fillingFactor;
+            Integer quenchFactor;
+            quenchFactor = beverageType * volume;
+            return quenchFactor;
         }
     }
 }

@@ -13,7 +13,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author zev
+ * @author Adam Decker
  */
 public class ConsumableControlTest {
     
