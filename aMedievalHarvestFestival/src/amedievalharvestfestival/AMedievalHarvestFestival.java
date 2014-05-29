@@ -7,23 +7,23 @@
 package amedievalharvestfestival;
 
 
+import byui.cit260.aMedievalHarvestFestival.model.Actors;
 import byui.cit260.aMedievalHarvestFestival.model.BeverageItem;
 import byui.cit260.aMedievalHarvestFestival.model.ClueItem;
 import byui.cit260.aMedievalHarvestFestival.model.FoodItem;
 import byui.cit260.aMedievalHarvestFestival.model.Game;
 import byui.cit260.aMedievalHarvestFestival.model.GiftItem;
-import byui.cit260.aMedievalHarvestFestival.model.InventoryItem;
-import byui.cit260.aMedievalHarvestFestival.model.Player;
-import byui.cit260.aMedievalHarvestFestival.model.WeaponItem;
-
-import byui.cit260.aMedievalHarvestFestival.model.Actors;
 import byui.cit260.aMedievalHarvestFestival.model.InstanceLocation;
+import byui.cit260.aMedievalHarvestFestival.model.InventoryItem;
 import byui.cit260.aMedievalHarvestFestival.model.Location;
 import byui.cit260.aMedievalHarvestFestival.model.Map;
+import byui.cit260.aMedievalHarvestFestival.model.Player;
 import byui.cit260.aMedievalHarvestFestival.model.PoolInstance;
 import byui.cit260.aMedievalHarvestFestival.model.PuzzleLocation;
 import byui.cit260.aMedievalHarvestFestival.model.RoomInstance;
+import byui.cit260.aMedievalHarvestFestival.model.WeaponItem;
 import byui.cit260.aMedievalHarvestFestival.model.YardInstance;
+import byui.cit260.aMedievalHarvestFestival.view.StartProgramView;
 
 
 /**
@@ -31,6 +31,7 @@ import byui.cit260.aMedievalHarvestFestival.model.YardInstance;
  * @author Kurt
  */
 public class AMedievalHarvestFestival {
+    private static String playersName;
 
     /**
      * @param args the command line arguments
@@ -181,6 +182,9 @@ public class AMedievalHarvestFestival {
         String yardInstanceInfo = yardInstanceOne.toString();
         System.out.println(yardInstanceInfo);
 
+        StartProgramView startProgramView = new StartProgramView();
+        startProgramView.startProgram();
+    
     }
     
 }
