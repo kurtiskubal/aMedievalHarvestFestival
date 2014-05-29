@@ -6,7 +6,6 @@
 
 package byui.cit260.aMedievalHarvestFestival.control;
 
-import amedievalharvestfestival.AMedievalHarvestFestival;
 import byui.cit260.aMedievalHarvestFestival.model.Player;
 
 /**
@@ -22,6 +21,9 @@ public class ProgramControl {
       
         
         return player;
+    }
+    public void saveGame(){
+        System.out.println("\n**** saveGame stub function called ****");
     }
 
   
