@@ -80,6 +80,14 @@ public class MainMenuView {
                 break;
             case 'E':
                 return;
+            case 'P' :
+                PuzzleView puzzleTrial = new PuzzleView();
+                puzzleTrial.getPlayerSolution();
+                break;
+            case 'D' :
+                LocationView locationTrial = new LocationView();
+                locationTrial.displayLocationMenu();
+                break;
             default:
                 System.out.print("\n*** Invalid selction *** Try Again");
                 break;
