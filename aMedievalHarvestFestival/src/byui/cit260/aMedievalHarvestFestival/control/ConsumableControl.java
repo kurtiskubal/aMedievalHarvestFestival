@@ -13,10 +13,10 @@ package byui.cit260.aMedievalHarvestFestival.control;
 public class ConsumableControl {
     public Integer calcFillingFoodItem(Integer foodType, Integer weight){
         if(foodType == null || weight == null)return null;
-        if(foodType < 1)return -1;
-        if(weight < 1)return -2;
-        if (foodType > 5)return -3;
-        if(weight > 10)return -4;
+        else if(foodType < 1)return -1;
+        else if(weight < 1)return -2;
+        else if (foodType > 5)return -3;
+        else if(weight > 10)return -4;
         else {
             Integer fillingFactor;
             fillingFactor = foodType * weight;
@@ -25,10 +25,10 @@ public class ConsumableControl {
     }
     public Integer calcQuenchBeverageItem(Integer beverageType, Integer volume){
         if(beverageType == null || volume == null)return null;
-        if(beverageType < 1)return -1;
-        if(volume < 1)return -2;
-        if (beverageType > 5)return -3;
-        if(volume > 10)return -4;
+        else if(beverageType < 1)return -1;
+        else if(volume < 1)return -2;
+        else if (beverageType > 5)return -3;
+        else if(volume > 10)return -4;
         else {
             Integer quenchFactor;
             quenchFactor = beverageType * volume;

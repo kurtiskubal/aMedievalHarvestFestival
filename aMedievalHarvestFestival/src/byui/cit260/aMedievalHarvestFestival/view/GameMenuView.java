@@ -13,7 +13,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author Adam
+ * @author Adam Decker
  */
 public class GameMenuView {
     private static final String MENU = "\n"

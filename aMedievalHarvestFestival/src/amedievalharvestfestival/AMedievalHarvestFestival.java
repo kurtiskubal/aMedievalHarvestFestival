@@ -9,6 +9,7 @@ package amedievalharvestfestival;
 
 import byui.cit260.aMedievalHarvestFestival.model.Game;
 import byui.cit260.aMedievalHarvestFestival.model.Player;
+import byui.cit260.aMedievalHarvestFestival.view.ConsumableView;
 import byui.cit260.aMedievalHarvestFestival.view.StartProgramView;
 
 
@@ -23,6 +24,9 @@ public class AMedievalHarvestFestival {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        
+        ConsumableView startConView = new ConsumableView();
+        startConView.determineConsumableValue();
 
         StartProgramView startProgramView = new StartProgramView();
         startProgramView.startProgram();
