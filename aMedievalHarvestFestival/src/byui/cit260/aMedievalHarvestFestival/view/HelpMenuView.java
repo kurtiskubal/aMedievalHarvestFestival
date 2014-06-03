@@ -30,7 +30,7 @@ public class HelpMenuView {
             + "\nQ - Leave the How to Play menu"
             + "\n----------------------------------------------";
 
-    void displayMenu() {
+    public void displayMenu() {
         
         char selection = ' ';
         do {

@@ -6,11 +6,18 @@
 
 package byui.cit260.aMedievalHarvestFestival.control;
 
+import byui.cit260.aMedievalHarvestFestival.model.Location;
+
 /**
  *
  * @author Kurt
  */
 public class MapControl {
+
+    public static Location getCurrentLocation() {
+        System.out.println("\n**** getCurrentLocation stub function called ****");
+        return null;
+    }
     public double calcSqFootageOfRoom(double roomWidth, double roomLength){
 
         if (roomWidth < 0 || roomLength < 0){

@@ -22,6 +22,7 @@ public class Player implements Serializable{
     private double health;
     private double hunger;
     private double thirst;
+    
 
     public Player() {
     }

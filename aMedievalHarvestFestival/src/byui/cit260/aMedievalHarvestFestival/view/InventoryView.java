@@ -6,26 +6,23 @@
 
 package byui.cit260.aMedievalHarvestFestival.view;
 
-
-import byui.cit260.aMedievalHarvestFestival.control.ProgramControl;
 import java.util.Scanner;
 
 /**
  *
- * @author Kurt
+ * @author zev
  */
-public class MainMenuView {
+public class InventoryView {
     
     private static final String MENU = "\n"
             + "\n----------------------------------------------"
-            + "\n| Main Menu                                  |"
-            + "\nG - Start the Game"
-            + "\nH - How to Play"
-            + "\nS - Save your Game"
-            + "\nE - Exit the Game"
+            + "\n| Item Menu                                  |"
+            + "\nU - Use item"
+            + "\nE - Examine Item"
+            + "\nQ - Exit to Game Menu"
             + "\n----------------------------------------------";
-
-    public void displayMenu() {
+    
+    public void displayInventoryMenu() {
         
         char selection = ' ';
         do {
@@ -36,22 +33,22 @@ public class MainMenuView {
             selection = input.charAt(0);
             
             this.doAction(selection);
-        } while (selection != 'E');
+        } while (selection != 'Q');
         
         
     }
-
+    
     public String getInput() {
         boolean valid = false;
-        String mainInput = null;
+        String helpInput = null;
         Scanner keyboard = new Scanner(System.in);
         
         while(!valid) {
             
-            mainInput = keyboard.nextLine();
-            mainInput = mainInput.trim();
+            helpInput = keyboard.nextLine();
+            helpInput = helpInput.trim();
             
-            if (mainInput.length() != 1) {
+            if (helpInput.length() != 1) {
                 System.out.println("Invalid selection - the selection must be non blank" +
                                    " and only one character in length.");
             }
@@ -61,37 +58,30 @@ public class MainMenuView {
             }
         }
         
-        return mainInput.toUpperCase();
+        return helpInput.toUpperCase();
     }
-
+    
     public void doAction(char selection) {
         switch (selection) {
-            case 'G':
-                GameMenuView gameMenu = new GameMenuView();
-                gameMenu.displayMenu();
-                break;
-            case 'H':
-                HelpMenuView helpMenu = new HelpMenuView();
-                helpMenu.displayMenu();
-                break;
-            case 'S':
-                ProgramControl saveGame = new ProgramControl();
-                saveGame.saveGame();
+            case 'U':
+                System.out.println("\n**** decisions still need to be made on how items are used ****");
+
                 break;
             case 'E':
+                this.displayItemDescription();
+                 
+                break;
+            case 'Q':
                 return;
-            case 'P' :
-                PuzzleView puzzleTrial = new PuzzleView();
-                puzzleTrial.getPlayerSolution();
-                break;
-            case 'D' :
-                LocationView locationTrial = new LocationView();
-                locationTrial.displayLocationMenu();
-                break;
             default:
                 System.out.print("\n*** Invalid selction *** Try Again");
                 break;
         }
     }
-    
+
+    public void displayItemDescription() {
+        // call Control function to get the item's description
+        System.out.println("\n**** displayItemDescription stub function called ****");
+        // Print out the description of the current location
+    }
 }

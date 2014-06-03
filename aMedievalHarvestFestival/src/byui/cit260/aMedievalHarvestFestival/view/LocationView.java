@@ -40,7 +40,7 @@ public class LocationView {
             + "\nQ - Quit the Move to a New Location menu"
             + "\n----------------------------------------------";
 
-    void displayLocationMenu() {
+    public void displayLocationMenu() {
         
         char selection = ' ';
         do {
