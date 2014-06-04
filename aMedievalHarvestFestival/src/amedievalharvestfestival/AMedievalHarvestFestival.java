@@ -25,11 +25,13 @@ public class AMedievalHarvestFestival {
      */
     public static void main(String[] args) {
         
+        StartProgramView startProgramView = new StartProgramView();
+        startProgramView.startProgram();
+        
         ConsumableView startConView = new ConsumableView();
         startConView.determineConsumableValue();
 
-        StartProgramView startProgramView = new StartProgramView();
-        startProgramView.startProgram();
+        
         
         
       
