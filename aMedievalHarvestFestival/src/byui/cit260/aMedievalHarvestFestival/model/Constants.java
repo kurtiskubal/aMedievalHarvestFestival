@@ -47,7 +47,7 @@ public class Constants {
     public final static int SERVANT_DAVID = 9;
     public final static int SERVANT_LARRY = 10;
     
-    public final static int MAP_COLUMN_COUNT = 10;
-    public final static int MAP_ROW_COUNT = 10;
+    public final static int MAP_COLUMN_COUNT = 7;
+    public final static int MAP_ROW_COUNT = 3;
     
 }
