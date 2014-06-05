@@ -18,6 +18,10 @@ public class MapControl {
         System.out.println("\n**** getCurrentLocation stub function called ****");
         return null;
     }
+
+    static void moveActorsToLocation(int i, int i0) {
+       System.out.println("\n**** moveActorsToLocation stub function called ****");
+    }
     public double calcSqFootageOfRoom(double roomWidth, double roomLength){
 
         if (roomWidth < 0 || roomLength < 0){

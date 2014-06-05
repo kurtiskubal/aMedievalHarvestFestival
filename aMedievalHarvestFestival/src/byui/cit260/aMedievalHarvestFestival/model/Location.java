@@ -14,28 +14,38 @@ import java.io.Serializable;
  */
 public class Location implements Serializable {
     
-    private double coordinates;
+    private double row;
+    private double column;
 
     public Location() {
     }
 
-    public double getCoordinates() {
-        return coordinates;
+    public double getRow() {
+        return row;
     }
 
-    public void setCoordinates(double coordinates) {
-        this.coordinates = coordinates;
+    public void setRow(double row) {
+        this.row = row;
+    }
+
+    public double getColumn() {
+        return column;
+    }
+
+    public void setColumn(double column) {
+        this.column = column;
     }
 
     @Override
     public String toString() {
-        return "Location{" + "coordinates=" + coordinates + '}';
+        return "Location{" + "row=" + row + ", column=" + column + '}';
     }
 
     @Override
     public int hashCode() {
-        int hash = 3;
-        hash = 53 * hash + (int) (Double.doubleToLongBits(this.coordinates) ^ (Double.doubleToLongBits(this.coordinates) >>> 32));
+        int hash = 7;
+        hash = 67 * hash + (int) (Double.doubleToLongBits(this.row) ^ (Double.doubleToLongBits(this.row) >>> 32));
+        hash = 67 * hash + (int) (Double.doubleToLongBits(this.column) ^ (Double.doubleToLongBits(this.column) >>> 32));
         return hash;
     }
 
@@ -48,11 +58,18 @@ public class Location implements Serializable {
             return false;
         }
         final Location other = (Location) obj;
-        if (Double.doubleToLongBits(this.coordinates) != Double.doubleToLongBits(other.coordinates)) {
+        if (Double.doubleToLongBits(this.row) != Double.doubleToLongBits(other.row)) {
+            return false;
+        }
+        if (Double.doubleToLongBits(this.column) != Double.doubleToLongBits(other.column)) {
             return false;
         }
         return true;
     }
+
+    
+
+    
 
     public void displayLocationMenu() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
