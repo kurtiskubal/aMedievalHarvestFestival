@@ -16,7 +16,8 @@ public class Location implements Serializable {
     
     private double row;
     private double column;
-
+    private boolean visited;
+    
     public Location() {
     }
 
@@ -34,6 +35,14 @@ public class Location implements Serializable {
 
     public void setColumn(double column) {
         this.column = column;
+    }
+    
+    public boolean isVisited() {
+        return visited;
+    }
+
+    public void setVisited(boolean visited) {
+        this.visited = visited;
     }
 
     @Override
@@ -74,6 +83,8 @@ public class Location implements Serializable {
     public void displayLocationMenu() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    
     
     
     
