@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author zev
+ * @author Adam Decker
  */
 public class InventoryView {
     

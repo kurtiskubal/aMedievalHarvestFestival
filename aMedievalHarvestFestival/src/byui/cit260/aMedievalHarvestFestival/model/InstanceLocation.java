@@ -16,7 +16,6 @@ import java.util.Objects;
 public class InstanceLocation implements Serializable {
     
     //class instance variables
-    private String visited;
     private String itemsStored;
     private String type;
     private String description;
@@ -26,14 +25,6 @@ public class InstanceLocation implements Serializable {
     public InstanceLocation() {
     }
     
-    public String getVisited() {
-        return visited;
-    }
-
-    public void setVisited(String visited) {
-        this.visited = visited;
-    }
-
     public String getItemsStored() {
         return itemsStored;
     }

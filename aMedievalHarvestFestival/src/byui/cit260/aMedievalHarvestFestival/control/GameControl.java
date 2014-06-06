@@ -19,6 +19,7 @@ import byui.cit260.aMedievalHarvestFestival.model.InventoryItem;
 import byui.cit260.aMedievalHarvestFestival.model.Location;
 import byui.cit260.aMedievalHarvestFestival.model.Map;
 import byui.cit260.aMedievalHarvestFestival.model.Player;
+import byui.cit260.aMedievalHarvestFestival.model.RoomInstance;
 import byui.cit260.aMedievalHarvestFestival.model.WeaponItem;
 
 /**
@@ -259,14 +260,55 @@ public class GameControl {
 
     private static Map createMap() {
        
-        Map map = new Map(7,3);
+        Map map = new Map(3,7);
         
         Location[][] locations = map.getLocations();
-        
         InstanceLocation stableInstance = new InstanceLocation();
-        stableInstance.setDescription("");
-        
+        stableInstance.setDescription("\nThe stables are large with a single row of four stalls. Three of these stalls are small and designed to "
+                                    + "\nready horses for riding. The fourth is larger and holds sick or pregnant horses when needed. Across the "
+                                    + "\nwalkway are several storage closets to hold the King's and his guest's riding tack. Around the corner is"
+                                    + "\na large room where the hay is stored out of the rain. There are several locked closets around the Stable" 
+                                    + "\nto secure tools and such from thieves. Out back behind is the open corral where the horses are kept.    ");
+        stableInstance.setVisited(false);
+        stableInstance.setRow(0);
+        stableInstance.setColumn(0);
+        stableInstance.setEnergyUsed(5);
+        stableInstance.setFluidsUsed(0);
+        stableInstance.setItemsStored(0);
+        stableInstance.setType("Stable");
         locations[0][0].setInstance(stableInstance);
+        
+        InstanceLocation servantsQuartersInstance = new InstanceLocation();
+        servantsQuartersInstance.setDescription("The Servant's quarters are large enough to sleep half the staff and each bed has a wardrobe   "
+                                            + "\ndressor and a large chest to keep personal belongings. Half of the furniture is pushed up     "
+                                            + "\nagainst the back wall as most servants are married and live in a house out in the nearby      " 
+                                            + "\nvillage. Everything is clean and well organized in the room.");
+        servantsQuartersInstance.setVisited(false);
+        servantsQuartersInstance.setRow(0);
+        servantsQuartersInstance.setColumn(1);
+        servantsQuartersInstance.setEnergyUsed(5);
+        servantsQuartersInstance.setFluidsUsed(0);
+        servantsQuartersInstance.setItemsStored(0);
+        servantsQuartersInstance.setType("Servant's Quarters");
+        locations[0][1].setInstance(servantsQuartersInstance);
+        
+        RoomInstance dukeLuisRoom = new RoomInstance();
+        dukeLuisRoom.setDescription();
+        dukeLuisRoom.setVisited();
+        dukeLuisRoom.setRow();
+        dukeLuisRoom.setColumn();
+        dukeLuisRoom.setRoomHeight(10);
+        dukeLuisRoom.setRoomLength(20);
+        dukeLuisRoom.setRoomWidth(16);
+        dukeLuisRoom.setSqFootageRoom(320);
+        locations[0][2].setInstance(dukeLuisRoom);
+        
+        //there are more rooms. i ran out of time. each one is taking about 20-30 mins.
+        //Also none of the subclasses for the locations are coded to be a sub-class. 
+        //The attribute "description" isnt in all the sub-classes and should me put in
+        //the super-class anyways.
+        
+        
         
         return map;
         

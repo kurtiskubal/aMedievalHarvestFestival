@@ -6,7 +6,6 @@
 
 package byui.cit260.aMedievalHarvestFestival.view;
 
-import amedievalharvestfestival.AMedievalHarvestFestival;
 import byui.cit260.aMedievalHarvestFestival.control.MapControl;
 import byui.cit260.aMedievalHarvestFestival.model.Location;
 import java.util.Scanner;

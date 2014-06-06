@@ -67,7 +67,10 @@ public class ConsumableView {
                     valid = true;
                 }
             }
-            else return;
+            else {
+                System.out.println("You did not select a Food or Beverage");
+                return;
+            }
         }
     }
 }
