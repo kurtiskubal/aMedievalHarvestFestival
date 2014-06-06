@@ -15,8 +15,8 @@ import java.io.Serializable;
 public class Map implements Serializable {
     
 //class instance variables
-    private double rowCount;
-    private double columnCount;
+    private int rowCount;
+    private int columnCount;
     private Location[][] locations;
     
     public Map() {
@@ -49,7 +49,7 @@ public class Map implements Serializable {
         return rowCount;
     }
 
-    public void setRowCount(double rowCount) {
+    public void setRowCount(int rowCount) {
         this.rowCount = rowCount;
     }
 
@@ -57,7 +57,7 @@ public class Map implements Serializable {
         return columnCount;
     }
 
-    public void setColumnCount(double columnCount) {
+    public void setColumnCount(int columnCount) {
         this.columnCount = columnCount;
     }
 
@@ -91,6 +91,12 @@ public class Map implements Serializable {
         }
         return true;
     }
+
+    public Location[][] getLocations() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    
     
     
     

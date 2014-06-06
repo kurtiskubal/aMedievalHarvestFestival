@@ -17,6 +17,7 @@ import byui.cit260.aMedievalHarvestFestival.model.GiftItem;
 import byui.cit260.aMedievalHarvestFestival.model.InstanceLocation;
 import byui.cit260.aMedievalHarvestFestival.model.InventoryItem;
 import byui.cit260.aMedievalHarvestFestival.model.Location;
+import byui.cit260.aMedievalHarvestFestival.model.Map;
 import byui.cit260.aMedievalHarvestFestival.model.Player;
 import byui.cit260.aMedievalHarvestFestival.model.WeaponItem;
 
@@ -39,7 +40,7 @@ public class GameControl {
         
         GameControl.createInventoryList();
         GameControl.createActorsList();
-        GameControl.createMap();
+        GameControl.game.setMap(GameControl.createMap());
         
         MapControl.moveActorsToLocation(0,3);
     }
@@ -256,13 +257,22 @@ public class GameControl {
         
     }
 
-    private static void createMap() {
-        Location[][] map = new Location[Constants.MAP_ROW_COUNT][Constants.MAP_COLUMN_COUNT];
-        Location location = new Location();
+    private static Map createMap() {
+       
+        Map map = new Map(7,3);
         
-        location.setRow(0);
-        location.setColumn(0);
-        InstanceLocation instance = new InstanceLocation();
+        Location[][] locations = map.getLocations();
+        
+        InstanceLocation stableInstance = new InstanceLocation();
+        stableInstance.setDescription("");
+        
+        locations[0][0].setInstance(stableInstance);
+        
+        return map;
+        
+    }
+    
+    public static void sortInventory(InventoryItem[] inventory) {
         
     }
     
